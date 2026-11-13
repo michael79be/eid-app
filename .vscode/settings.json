@@ -16,7 +16,7 @@
         "editor.insertSpaces": true,
         "editor.detectIndentation": false
     },
-    "gitPullOnOpen.enabled": true,
-    "gitPullOnOpen.continuousPull.enabled": true,
-    "gitPullOnOpen.continuousPull.interval": 30000
+    "gitAutoPull.enabled": true,
+    "gitAutoPull.continuousPull.enabled": true,
+    "gitAutoPull.continuousPull.interval": 30000
 }
