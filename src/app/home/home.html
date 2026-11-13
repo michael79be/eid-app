@@ -1,0 +1,25 @@
+<div appearance="floating" tuiCardLarge>
+    <section>
+        <p>Coming soon...</p>
+        @if (downloadUrl(); as url) {
+            <a tuiButton [href]="url" class="mt-2" target="_blank" rel="noopener noreferrer">
+                Download companion app
+            </a>
+        }
+        @if (otherDownloads().length > 0) {
+            <p class="mt-4">Other platforms:</p>
+            <nav aria-label="Other platforms" class="mt-2 flex flex-wrap gap-2">
+                @for (download of otherDownloads(); track download.url) {
+                    <a
+                        [href]="download.url"
+                        class="text-xs underline"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        {{ download.label }}
+                    </a>
+                }
+            </nav>
+        }
+    </section>
+</div>

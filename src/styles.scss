@@ -3,3 +3,11 @@
 :root {
     --tui-theme-color: rgb(125 195 152);
 }
+
+:root,
+[tuiTheme] {
+    --tui-background-accent-1: var(--tui-theme-color);
+    --tui-background-accent-1-hover: color-mix(in srgb, var(--tui-theme-color), black 10%);
+    --tui-background-accent-1-pressed: color-mix(in srgb, var(--tui-theme-color), black 20%);
+    --tui-text-primary-on-accent-1: #1b1f3b;
+}
