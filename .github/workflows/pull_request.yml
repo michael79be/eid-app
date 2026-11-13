@@ -1,0 +1,93 @@
+name: eid-app
+
+on:
+  pull_request:
+    paths:
+      - 'app/.gitignore'
+      - 'app/package.json'
+      - 'app/package-lock.json'
+      - 'app/rollup.config.ts'
+      - 'app/src/**'
+      - 'app/tsconfig.json'
+      - 'public/icon500.png'
+      - '.github/workflows/pull_request.yml'
+  push:
+    branches:
+      - main
+    paths:
+      - 'app/.gitignore'
+      - 'app/package.json'
+      - 'app/package-lock.json'
+      - 'app/rollup.config.ts'
+      - 'app/src/**'
+      - 'app/tsconfig.json'
+      - 'public/icon500.png'
+      - '.github/workflows/pull_request.yml'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: eid-app-build-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  release:
+    name: Bundle all platforms
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Install dependencies
+        working-directory: app
+        run: npm install
+      - name: Build and bundle all platforms
+        working-directory: app
+        run: npm run build
+      - name: Archive macOS app bundle
+        run: ditto -c -k --sequesterRsrc --keepParent app/release/eid-app.app app/release/eid-app.app.zip
+      - uses: actions/upload-artifact@v4
+        with:
+          name: eid-app-release
+          path: app/release
+          if-no-files-found: error
+          retention-days: 30
+
+  publish:
+    name: Commit release with bot
+    needs: release
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          ref: main
+      - uses: actions/download-artifact@v4
+        with:
+          name: eid-app-release
+          path: app/release
+      - name: Restore executable permissions
+        run: |
+          chmod +x \
+            app/release/eid-app-linux \
+            app/release/eid-app-linux-32 \
+            app/release/eid-app-macos \
+            app/release/eid-app-macos-intel \
+            app/release/eid-app-macos-universal
+      - name: Commit release
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -f app/release/*
+          if git diff --cached --quiet; then
+            echo "Release files are already up to date"
+            exit 0
+          fi
+          git commit -m "chore: update eid-app release"
+          git push origin HEAD:main

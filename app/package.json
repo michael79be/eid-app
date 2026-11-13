@@ -1,0 +1,23 @@
+{
+  "name": "eid-app",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "prebuild": "rollup --config rollup.config.ts --configPlugin typescript",
+    "build": "quickjs-native bundle dist/eid-app.js --app --scheme eid-app --icon ../public/icon500.png --output-dir release"
+  },
+  "dependencies": {
+    "quickjs-native": "git+https://github.com/michael79be/quickjs-native.git#main",
+    "quickjs-pkcs11": "git+https://github.com/michael79be/quickjs-pkcs11.git#main",
+    "quickjs-ui": "git+https://github.com/michael79be/quickjs-ui.git#main"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^29.0.3",
+    "@rollup/plugin-node-resolve": "^16.0.3",
+    "@rollup/plugin-typescript": "^12.3.1",
+    "rollup": "^4.68.0",
+    "tslib": "^2.9.1",
+    "typescript": "^6.0.3"
+  }
+}
