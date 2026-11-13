@@ -21,12 +21,14 @@ export class Home implements OnInit {
 
   readonly downloadUrl = signal<string | null>(null);
   readonly otherDownloads = signal<{ label: string; url: string }[]>([]);
+  readonly isMacOS = signal(false);
 
   ngOnInit(): void {
     const platform = this.detectPlatform();
     const primaryDownload = this.platformDownloads.find(
       (download) => download.platform === platform,
     );
+    this.isMacOS.set(platform === 'macos');
 
     this.downloadUrl.set(
       primaryDownload ? `${this.releaseUrl}/${primaryDownload.file}` : null,

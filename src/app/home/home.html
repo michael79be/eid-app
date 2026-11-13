@@ -6,6 +6,25 @@
                 Download companion app
             </a>
         }
+        @if (isMacOS()) {
+            <div class="mt-4">
+                <h2>Opening the app on macOS</h2>
+                <p>After downloading and unzipping the app:</p>
+                <ol class="mt-2 list-decimal pl-5">
+                    <li>
+                        In Finder, Control-click (or right-click) the app and choose
+                        <strong>Open</strong>.
+                    </li>
+                    <li>Select <strong>Open</strong> again in the warning dialog.</li>
+                    <li>
+                        If macOS blocks it, try opening it once, then go to
+                        <strong>System Settings &gt; Privacy &amp; Security</strong> and select
+                        <strong>Open Anyway</strong>.
+                    </li>
+                </ol>
+                <p class="mt-2">Only do this if you trust the source.</p>
+            </div>
+        }
         @if (otherDownloads().length > 0) {
             <p class="mt-4">Other platforms:</p>
             <nav aria-label="Other platforms" class="mt-2 flex flex-wrap gap-2">
