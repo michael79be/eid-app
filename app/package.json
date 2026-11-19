@@ -8,9 +8,9 @@
     "build": "quickjs-native bundle dist/eid-app.js --app --scheme eid-app --icon ../public/icon500.png --output-dir release"
   },
   "dependencies": {
-    "quickjs-native": "git+https://github.com/michael79be/quickjs-native.git#main",
-    "quickjs-pkcs11": "git+https://github.com/michael79be/quickjs-pkcs11.git#main",
-    "quickjs-ui": "git+https://github.com/michael79be/quickjs-ui.git#main"
+    "quickjs-native": "github:michael79be/quickjs-native#main",
+    "quickjs-pkcs11": "github:michael79be/quickjs-pkcs11#main",
+    "quickjs-ui": "github:michael79be/quickjs-ui#main"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^29.0.3",

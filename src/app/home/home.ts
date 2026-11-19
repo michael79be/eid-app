@@ -24,6 +24,11 @@ export class Home implements OnInit {
   readonly isMacOS = signal(false);
 
   ngOnInit(): void {
+    const h = location.hash.substring(1);
+    if (h.length) {
+        const json = JSON.parse(h);
+        alert(JSON.stringify(json));
+    }
     const platform = this.detectPlatform();
     const primaryDownload = this.platformDownloads.find(
       (download) => download.platform === platform,
