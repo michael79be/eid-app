@@ -24,8 +24,14 @@ const customScheme = 'eid-app://';
 if (callbackUrl && callbackUrl.toLowerCase().indexOf(customScheme) === 0) {
     callbackUrl = `https://${callbackUrl.substring(customScheme.length)}`;
 }
+let displayUrl: string | undefined;
+try {
+    displayUrl = callbackUrl ? new URL(callbackUrl).origin : undefined;
+} catch {
+    displayUrl = callbackUrl;
+}
 const confirmationMessage = callbackUrl
-    ? `${callbackUrl} wants to read information from the card reader. Do you agree?`
+    ? `${displayUrl} wants to read information from the card reader. Do you agree?`
     : 'Read data from the eID card?';
 
 if (confirm(confirmationMessage, 'eID')) {
