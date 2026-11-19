@@ -1,3 +1,3 @@
 # e-ID app
 
-This /docs folder is used as a web public folder
+This /web folder is used as a web public folder

@@ -18,7 +18,7 @@
           "builder": "@angular/build:application",
           "options": {
             "outputPath": {
-              "base": "docs",
+              "base": "web",
               "browser": ""
             },
             "polyfills": [

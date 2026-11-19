@@ -26,7 +26,7 @@ export class Home implements OnInit {
   ngOnInit(): void {
     const h = location.hash.substring(1);
     if (h.length) {
-        const json = JSON.parse(h);
+        const json = JSON.parse(decodeURIComponent(h));
         alert(JSON.stringify(json));
     }
     const platform = this.detectPlatform();
