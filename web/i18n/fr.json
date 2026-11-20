@@ -1,0 +1,51 @@
+{
+  "APP": {
+    "TITLE": "e-ID app",
+    "SUBTITLE": "Lisez les données de votre carte d'identité électronique"
+  },
+  "HOME": {
+    "DOWNLOAD_COMPANION_APP": "Télécharger l'application compagnon",
+    "TEST_COMPANION_APP": "Tester l'application compagnon",
+    "OPENING_MACOS": "Ouvrir l'app sur macOS",
+    "MACOS_STEP_1": "Après avoir téléchargé et décompressé l'app :",
+    "MACOS_STEP_2": "Dans le Finder, faites un clic droit (ou contrôle + clic) sur l'app et choisissez <strong>Ouvrir</strong>.",
+    "MACOS_STEP_3": "Sélectionnez de nouveau <strong>Ouvrir</strong> dans la fenêtre d'avertissement.",
+    "MACOS_STEP_4": "Si macOS bloque l'app, ouvrez-la une fois, puis allez dans <strong>Réglages Système > Confidentialité et Sécurité</strong> et sélectionnez <strong>Ouvrir quand même</strong>.",
+    "MACOS_TRUST": "Ne faites cela que si vous faites confiance à la source.",
+    "OTHER_PLATFORMS": "Autres plateformes :"
+  },
+  "VIEWER": {
+    "TITLE": "Carte e-ID",
+    "SUBTITLE": "Données lues depuis le lecteur de carte e-ID",
+    "NO_DATA": "Aucune donnée de carte disponible.",
+    "NO_DATA_LINK": "Aucune donnée de carte dans le lien.",
+    "INVALID_FORMAT": "Format de données de carte invalide.",
+    "READ_FAILED": "Échec de la lecture des données de carte depuis le lien.",
+    "PRINT": "Imprimer",
+    "BACK_HOME": "Retour à l'accueil"
+  },
+  "EID": {
+    "CARD_NUMBER": "Numéro de carte",
+    "CHIP_NUMBER": "Numéro de puce",
+    "VALIDITY_BEGIN_DATE": "Valable à partir du",
+    "VALIDITY_END_DATE": "Valable jusqu'au",
+    "ISSUING_MUNICIPALITY": "Commune émettrice",
+    "NATIONAL_NUMBER": "Numéro national",
+    "SURNAME": "Nom(s)",
+    "FIRSTNAME": "Prénom(s)",
+    "NATIONALITY": "Nationalité",
+    "PLACE_OF_BIRTH": "Lieu de naissance",
+    "DATE_OF_BIRTH": "Date de naissance",
+    "GENDER": "Sexe",
+    "DOCUMENT_TYPE": "Type de document",
+    "SPECIAL_STATUS": "Statut particulier",
+    "BASIC_KEY_HASH": "Hachage de clé de base",
+    "ADDRESS_STREET_AND_NUMBER": "Rue et numéro",
+    "ADDRESS_ZIP": "Code postal",
+    "ADDRESS_MUNICIPALITY": "Commune"
+  },
+  "COMMON": {
+    "BACK": "Retour",
+    "CLOSE": "Fermer"
+  }
+}

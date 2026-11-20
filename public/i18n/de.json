@@ -1,0 +1,51 @@
+{
+  "APP": {
+    "TITLE": "e-ID app",
+    "SUBTITLE": "Lesen Sie Ihre Daten vom elektronischen Personalausweis"
+  },
+  "HOME": {
+    "DOWNLOAD_COMPANION_APP": "Begleit-App herunterladen",
+    "TEST_COMPANION_APP": "Die Begleit-App testen",
+    "OPENING_MACOS": "Die App unter macOS öffnen",
+    "MACOS_STEP_1": "Nach dem Herunterladen und Entpacken der App:",
+    "MACOS_STEP_2": "Klicken Sie im Finder mit der rechten Maustaste (oder Strg + Klick) auf die App und wählen Sie <strong>Öffnen</strong>.",
+    "MACOS_STEP_3": "Wählen Sie im Warn-Dialog erneut <strong>Öffnen</strong>.",
+    "MACOS_STEP_4": "Wenn macOS die App blockiert, öffnen Sie diese einmal, gehen Sie dann zu <strong>Systemeinstellungen > Datenschutz & Sicherheit</strong> und wählen Sie <strong>Trotzdem öffnen</strong>.",
+    "MACOS_TRUST": "Tun Sie dies nur, wenn Sie der Quelle vertrauen.",
+    "OTHER_PLATFORMS": "Weitere Plattformen:"
+  },
+  "VIEWER": {
+    "TITLE": "e-ID Karte",
+    "SUBTITLE": "Kartendaten vom eID-Kartenleser ausgelesen",
+    "NO_DATA": "Keine Kartendaten verfügbar.",
+    "NO_DATA_LINK": "Keine Kartendaten im Link.",
+    "INVALID_FORMAT": "Ungültiges Kartendatenformat.",
+    "READ_FAILED": "Lesen der Kartendaten aus dem Link fehlgeschlagen.",
+    "PRINT": "Drucken",
+    "BACK_HOME": "Zurück zur Startseite"
+  },
+  "EID": {
+    "CARD_NUMBER": "Kartennummer",
+    "CHIP_NUMBER": "Chippnummer",
+    "VALIDITY_BEGIN_DATE": "Gültig ab",
+    "VALIDITY_END_DATE": "Gültig bis",
+    "ISSUING_MUNICIPALITY": "Ausstellende Gemeinde",
+    "NATIONAL_NUMBER": "Nationalnummer",
+    "SURNAME": "Nachname(n)",
+    "FIRSTNAME": "Vorname(n)",
+    "NATIONALITY": "Nationalität",
+    "PLACE_OF_BIRTH": "Geburtsort",
+    "DATE_OF_BIRTH": "Geburtsdatum",
+    "GENDER": "Geschlecht",
+    "DOCUMENT_TYPE": "Dokumenttyp",
+    "SPECIAL_STATUS": "Besonderer Status",
+    "BASIC_KEY_HASH": "Basis-Schlüssel-Hash",
+    "ADDRESS_STREET_AND_NUMBER": "Straße und Hausnummer",
+    "ADDRESS_ZIP": "PLZ",
+    "ADDRESS_MUNICIPALITY": "Gemeinde"
+  },
+  "COMMON": {
+    "BACK": "Zurück",
+    "CLOSE": "Schließen"
+  }
+}

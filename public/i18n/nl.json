@@ -1,0 +1,51 @@
+{
+  "APP": {
+    "TITLE": "e-ID app",
+    "SUBTITLE": "Lees de gegevens van uw elektronische identiteitskaart"
+  },
+  "HOME": {
+    "DOWNLOAD_COMPANION_APP": "Companion-app downloaden",
+    "TEST_COMPANION_APP": "De companion-app testen",
+    "OPENING_MACOS": "De app openen op macOS",
+    "MACOS_STEP_1": "Na het downloaden en uitpakken van de app:",
+    "MACOS_STEP_2": "Klik in Finder met de rechtermuisknop (of controle + klik) op de app en kies <strong>Openen</strong>.",
+    "MACOS_STEP_3": "Selecteer opnieuw <strong>Openen</strong> in het waarschuwingsvenster.",
+    "MACOS_STEP_4": "Als macOS de app blokkeert, open deze eenmaal, ga dan naar <strong>Systeeminstellingen > Privacy en Beveiliging</strong> en kies <strong>Toch openen</strong>.",
+    "MACOS_TRUST": "Doe dit alleen als u de bron vertrouwt.",
+    "OTHER_PLATFORMS": "Andere platforms:"
+  },
+  "VIEWER": {
+    "TITLE": "e-ID kaart",
+    "SUBTITLE": "Kaartgegevens gelezen vanuit de eID-kaartlezer",
+    "NO_DATA": "Geen kaartgegevens beschikbaar.",
+    "NO_DATA_LINK": "Geen kaartgegevens in de link.",
+    "INVALID_FORMAT": "Ongeldig formaat van kaartgegevens.",
+    "READ_FAILED": "Het lezen van de kaartgegevens vanuit de link is mislukt.",
+    "PRINT": "Afdrukken",
+    "BACK_HOME": "Terug naar startpagina"
+  },
+  "EID": {
+    "CARD_NUMBER": "Kaartnummer",
+    "CHIP_NUMBER": "Chipnummer",
+    "VALIDITY_BEGIN_DATE": "Geldig vanaf",
+    "VALIDITY_END_DATE": "Geldig tot",
+    "ISSUING_MUNICIPALITY": "Afgevende gemeente",
+    "NATIONAL_NUMBER": "Rijksregisternummer",
+    "SURNAME": "Achternaam(en)",
+    "FIRSTNAME": "Voornaam(en)",
+    "NATIONALITY": "Nationaliteit",
+    "PLACE_OF_BIRTH": "Geboorteplaats",
+    "DATE_OF_BIRTH": "Geboortedatum",
+    "GENDER": "Geslacht",
+    "DOCUMENT_TYPE": "Documenttype",
+    "SPECIAL_STATUS": "Bijzondere status",
+    "BASIC_KEY_HASH": "Hash van basissleutel",
+    "ADDRESS_STREET_AND_NUMBER": "Straat en nummer",
+    "ADDRESS_ZIP": "Postcode",
+    "ADDRESS_MUNICIPALITY": "Gemeente"
+  },
+  "COMMON": {
+    "BACK": "Terug",
+    "CLOSE": "Sluiten"
+  }
+}

@@ -1,9 +1,23 @@
 <tui-root>
-    <header tuiNavigationHeader>
-        <span tuiNavigationLogo>
-            <la-icon icon="id-card" size="2x"></la-icon>
-            <span tuiFade>e-ID app</span>
+    <header tuiNavigationHeader class="justify-between items-center px-4">
+        <span tuiNavigationLogo class="flex items-center gap-2">
+            <la-icon icon="id-card" size="3x"></la-icon>
+            <span tuiFade class="font-semibold text-lg">{{ 'APP.TITLE' | translate }}</span>
         </span>
+        <div class="flex items-center gap-2">
+            <button tuiButton type="button" [attr.aria-expanded]="open()" [tuiDropdown]="dropdownContent" [tuiDropdownManual]="open()" (click)="onClick()" class="text-xs border border-transparent hover:border-gray-300 focus:border-gray-300 rounded px-2 py-1 bg-transparent">
+                {{ buttonLabel() }}
+                <ng-template #dropdownContent>
+                    <tui-data-list>
+                        @for (lang of langs; track lang) {
+                        <button tuiOption type="button" (click)="onSelect(lang)">
+                            <span tuiTitle>{{ lang.toUpperCase() }}</span>
+                        </button>
+                        }
+                    </tui-data-list>
+                </ng-template>
+            </button>
+        </div>
     </header>
-    <router-outlet></router-outlet>
+    <section class="px-4"><router-outlet></router-outlet></section>
 </tui-root>

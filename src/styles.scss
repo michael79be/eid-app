@@ -11,3 +11,34 @@
     --tui-background-accent-1-pressed: color-mix(in srgb, var(--tui-theme-color), black 20%);
     --tui-text-primary-on-accent-1: #1b1f3b;
 }
+
+@media print {
+    body * {
+        visibility: hidden;
+    }
+    .printable, .printable * {
+        visibility: visible;
+    }
+    .printable {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        border: none;
+    }
+    .printable button[tuiButton],
+    .printable a[tuiButton] {
+        display: none;
+    }
+}
+
+button[tuiButton][appearance],
+a[tuiButton][appearance] {
+    --tui-text-primary: var(--tui-theme-color);
+}
+
+button[tuiButton][appearance="outline"],
+a[tuiButton][appearance="outline"] {
+    color: var(--tui-theme-color);
+    border-color: var(--tui-theme-color);
+}

@@ -1,0 +1,51 @@
+{
+  "APP": {
+    "TITLE": "e-ID app",
+    "SUBTITLE": "Read your electronic ID card data"
+  },
+  "HOME": {
+    "DOWNLOAD_COMPANION_APP": "Download companion app",
+    "TEST_COMPANION_APP": "Test the companion app",
+    "OPENING_MACOS": "Opening the app on macOS",
+    "MACOS_STEP_1": "After downloading and unzipping the app:",
+    "MACOS_STEP_2": "In Finder, Control-click (or right-click) the app and choose <strong>Open</strong>.",
+    "MACOS_STEP_3": "Select <strong>Open</strong> again in the warning dialog.",
+    "MACOS_STEP_4": "If macOS blocks it, open it once, then go to <strong>System Settings > Privacy & Security</strong> and select <strong>Open Anyway</strong>.",
+    "MACOS_TRUST": "Only do this if you trust the source.",
+    "OTHER_PLATFORMS": "Other platforms:"
+  },
+  "VIEWER": {
+    "TITLE": "e-ID Card",
+    "SUBTITLE": "Card data read from the eID card reader",
+    "NO_DATA": "No card data available.",
+    "NO_DATA_LINK": "No card data in the link.",
+    "INVALID_FORMAT": "Invalid card data format.",
+    "READ_FAILED": "Failed to read card data from the link.",
+    "PRINT": "Print",
+    "BACK_HOME": "Back to home"
+  },
+  "EID": {
+    "CARD_NUMBER": "Card number",
+    "CHIP_NUMBER": "Chip number",
+    "VALIDITY_BEGIN_DATE": "Valid from",
+    "VALIDITY_END_DATE": "Valid until",
+    "ISSUING_MUNICIPALITY": "Issuing municipality",
+    "NATIONAL_NUMBER": "National number",
+    "SURNAME": "Last name(s)",
+    "FIRSTNAME": "First name(s)",
+    "NATIONALITY": "Nationality",
+    "PLACE_OF_BIRTH": "Place of birth",
+    "DATE_OF_BIRTH": "Date of birth",
+    "GENDER": "Gender",
+    "DOCUMENT_TYPE": "Document type",
+    "SPECIAL_STATUS": "Special status",
+    "BASIC_KEY_HASH": "Basic key hash",
+    "ADDRESS_STREET_AND_NUMBER": "Street and number",
+    "ADDRESS_ZIP": "ZIP code",
+    "ADDRESS_MUNICIPALITY": "Municipality"
+  },
+  "COMMON": {
+    "BACK": "Back",
+    "CLOSE": "Close"
+  }
+}

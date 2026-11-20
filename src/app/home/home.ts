@@ -1,14 +1,17 @@
-import { Component, OnInit, signal } from '@angular/core';
+import { Component, OnInit, inject, signal } from '@angular/core';
+import { TranslatePipe, TranslateService } from '@ngx-translate/core';
+import { LaIconComponent } from 'angular-line-awesome';
 import { TuiButton } from '@taiga-ui/core';
 import { TuiCardLarge } from '@taiga-ui/layout';
 
 @Component({
   selector: 'app-home',
-  imports: [TuiButton, TuiCardLarge],
+  imports: [TranslatePipe, LaIconComponent, TuiButton, TuiCardLarge],
   templateUrl: './home.html',
   styleUrl: './home.scss',
 })
 export class Home implements OnInit {
+  private readonly translate = inject(TranslateService);
   private readonly releaseUrl =
     'https://github.com/michael79be/eid-app/raw/refs/heads/main/app/release';
   private readonly platformDownloads = [
@@ -24,11 +27,6 @@ export class Home implements OnInit {
   readonly isMacOS = signal(false);
 
   ngOnInit(): void {
-    const h = location.hash.substring(1);
-    if (h.length) {
-        const json = JSON.parse(decodeURIComponent(h));
-        alert(JSON.stringify(json));
-    }
     const platform = this.detectPlatform();
     const primaryDownload = this.platformDownloads.find(
       (download) => download.platform === platform,
